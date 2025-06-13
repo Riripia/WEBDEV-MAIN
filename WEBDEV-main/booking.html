@@ -3,49 +3,64 @@
 
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>ATT Travel and Tours - Packages</title>
-  <link rel="stylesheet" href="style.css"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ATT Travel and Tours - Booking</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Basic styling for layout */
+    .booking-details-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .booking-details-left {
+      flex: 1 1 500px;
+    }
+    .booking-details-image img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+    .booking-inclusions-exclusions {
+      display: flex;
+      justify-content: space-between;
+      gap: 40px;
+      margin-top: 20px;
+    }
+    .booking-inclusions-exclusions div {
+      flex: 1;
+    }
+    .booking-inclusions-exclusions ul {
+      list-style-type: disc;
+      margin-left: 20px;
+    }
+    .itinerary-content {
+      display: flex;
+      gap: 40px;
+      margin-top: 20px;
+    }
+    .itinerary-content > div {
+      flex: 1;
+    }
+    .booking-total-price {
+      font-size: 1.5em;
+      font-weight: bold;
+      margin-right: 20px;
+    }
+    .booking-action-row {
+      display: flex;
+      align-items: center;
+      margin-top: 30px;
+      gap: 10px;
+    }
+  </style>
 </head>
+
 <body>
-</head>
-<div id="authModal" class="modal">
-    <div class="modal-content">
-      <span id="closeAuth" class="close">&times;</span>
-      <div class="tabs">
-        <button id="tabSignIn" class="active">Sign In</button>
-        <button id="tabSignUp">Sign Up</button>
-      </div>
-      <div id="formSignIn" class="form-container">
-        <form id="signinForm">
-          <input type="text" placeholder="Username or Email" required>
-          <input type="password" placeholder="Password" required>
-          <button type="submit">Sign In</button>
-        </form>
-      </div>
-      <div id="formSignUp" class="form-container">
-        <form id="signupForm">
-          <h2>Create an Account</h2>
-          <label for="su-name"><b>Full Name</b></label>
-          <input id="su-name" type="text" placeholder="Your Name" required>
 
-          <label for="su-email"><b>Email</b></label>
-          <input id="su-email" type="email" placeholder="Your Email" required>
-
-          <label for="su-password"><b>Password</b></label>
-          <input id="su-password" type="password" placeholder="Password" required>
-
-          <label for="su-password2"><b>Confirm Password</b></label>
-          <input id="su-password2" type="password" placeholder="Repeat Password" required>
-
-          <button type="submit">Sign Up</button>
-        </form>
-      </div>
-    </div>
-  </div>
   <header>
     <div class="logo">
-      <img src="logo.png" alt="Logo"/>
+      <img src="logo.png" alt="Logo" />
     </div>
     <nav>
       <ul>
@@ -53,109 +68,68 @@
         <li><a href="aboutus.html">About us</a></li>
         <li><a href="services.html" class="active">Services</a></li>
         <li><a href="MyBooking.html">My Booking</a></li>
-        <li><a href="#" id="authTrigger">Sign in</a></li>
+        <li><a href="#" id="loginBtn">Login/Sign in</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
-  <section class="booking-details-section">
-  <div class="booking-details-row">
-    <!-- LEFT COLUMN -->
-    <div class="booking-details-left">
-      <div class="booking-details-header">
-        <div class="booking-details-meta">
-          <span><img src="calendar.png" class="meta-icon" alt="Duration"> 3D/2N</span>
-          <span><img src="location-red.png" class="meta-icon" alt="Location"> Philippines</span>
-        </div>
-        <h1 class="booking-title">Buscalan, Mountain Province</h1>
-        <div class="booking-price">₱3,750.00</div>
-      </div>
-      <div class="booking-details-info">
-        <p>
-          Tucked away in the misty mountains of Tinglayan, Kalinga, lies a quiet village that has captured the hearts of adventurers, artists, and culture lovers from all over the world—Buscalan.<br>
-          Known as the home of the legendary Apo Whang-Od, the last mambabatok (traditional Kalinga tattooist) of her generation, Buscalan offers more than just ink on skin. It is a journey into the heart of indigenous Filipino culture—where every tattoo tells a story, every trek breathes adventure, and every smile from the locals speaks of warmth and resilience.<br>
-          To reach Buscalan, visitors must hike through scenic rice terraces and narrow trails carved into the mountainside. The climb might leave you breathless, but the view—and the experience—are unforgettable. Along the way, you’ll be greeted by the serenity of nature and the humble beauty of village life.
-        </p>
-        <div class="booking-inclusions-exclusions">
-          <div>
-            <strong>INCLUSIONS</strong>
-            <ul>
-              <li>Roundtrip aircon van transfer</li>
-              <li>Environmental fee</li>
-              <li>Local guide fee</li>
-              <li>Tour coordinator</li>
-              <li>Home stay accomodation (room sharing)</li>
-              <li>3 sumptuous meals</li>
-              <li>Day1: Lunch and dinner</li>
-              <li>Day2: breakfast Unli rice and coffee of Kalinga</li>
-              <li>Sidetrip to Banaue (rice Terraces & pasalubong center) or Sagada/Baguio (optional)</li>
-            </ul>
+    <section class="booking-details-section">
+      <div class="booking-details-row">
+        <!-- LEFT COLUMN -->
+        <div class="booking-details-left">
+          <div class="booking-details-header">
+            <div class="booking-details-meta">
+              <span><img src="calendar.png" class="meta-icon" alt="Duration" /> <span id="duration">3D/2N</span></span>
+              <span><img src="location-red.png" class="meta-icon" alt="Location" /> <span id="location">Philippines</span></span>
+            </div>
+            <h1 class="booking-title" id="package-title">Package Title</h1>
+            <div class="booking-price" id="package-price">₱0.00</div>
           </div>
-          <div>
-            <strong>EXCLUSIONS</strong>
-            <ul>
-              <li>tattoo fee</li>
-              <li>Meals along the way</li>
-              <li>Tattoo stick</li>
-            </ul>
+          <div class="booking-details-info">
+            <p id="package-description">Package description goes here.</p>
+            <div class="booking-inclusions-exclusions">
+              <div>
+                <strong>INCLUSIONS</strong>
+                <ul id="inclusions-list"></ul>
+              </div>
+              <div>
+                <strong>EXCLUSIONS</strong>
+                <ul id="exclusions-list"></ul>
+              </div>
+            </div>
           </div>
         </div>
+        <!-- RIGHT COLUMN -->
+        <div class="booking-details-image">
+          <img id="package-image" src="" alt="Package Image" />
+        </div>
       </div>
-    </div>
-    <!-- RIGHT COLUMN -->
-    <div class="booking-details-image">
-      <img src="buscalan.jpg" alt="Buscalan" />
-    </div>
-  </div>
 
-  <!-- The rest of your content below (itinerary, guests, etc.) -->
-  <div class="booking-itinerary">
-    <div class="itinerary-title">ITINERARY</div>
-    <div class="itinerary-content">
-      <div>
-        <strong>07:30PM - PICK UP<br>08:00PM - ETD Going to Buscalan</strong>
-        <br><br>
-        <strong>Day 1 (Saturday)</strong><br>
-        02:00AM - Banaue Arch 03:00AM - Bontoc 04:00AM - ETA Buscalan Village and rest time waiting for sunrise<br>
-        05:30AM - prep start trek/register<br>
-        06:30AM - Breakfast at Buscalan Village<br>
-        07:30AM - Homestay - Tattoo sesh with the kids and Apo Whang Od<br>
-        12:00PM - Lunch - Explore the Village | Buscalan Rice Terraces | Falls<br>
-        07:00PM - Dinner / bonfire with the locals<br>
-        10:00PM - Lights off / curfew
+      <div class="booking-itinerary">
+        <div class="itinerary-title"><strong>ITINERARY</strong></div>
+        <div class="itinerary-content" id="itinerary-content">
+          <!-- Itinerary Left & Right Columns inserted here -->
+        </div>
       </div>
-      <div>
-        <strong>Day 2 (Sunday)</strong><br>
-        05:00AM - Wake up call time<br>
-        06:00AM - Breakfast<br>
-        07:00AM - Prepare things<br>
-        07:30AM - Start Descend<br>
-        12:00NN - Lunch at Mt. polis or Bontoc<br>
-        02:00PM - Sidetrip to Banaue & Bayyo Rice terraces | Baguio (Strawberry farm Pasalubong center and Highest Point)<br>
-        06:00PM - Dinner time at San Jose or Leezas<br>
-        08:00PM - Going back to Manila<br>
-        11:00PM - Manila
-      </div>
-    </div>
-  </div>
-  <div class="booking-guests-section">
-    <div class="guests-title">GUESTS</div>
-    <form class="guests-form">
-      <input type="number" placeholder="Adults (12 years and above)" min="1" required>
-      <input type="number" placeholder="Children (2 - 11 years old)" min="0">
-      <input type="date" placeholder="Travel date" required>
-    </form>
-  </div>
-  <div class="booking-action-row">
-    <div class="booking-total-price">₱3,750.00</div>
-    <button class="add-to-cart-btn">Add to Cart</button>
-    <button class="book-now-btn">BOOK NOW</button>
-  </div>
-</section>
-</main>
 
-  <!-- Footer -->
+      <div class="booking-guests-section">
+        <div class="guests-title"><strong>GUESTS</strong></div>
+        <form class="guests-form">
+          <input type="number" placeholder="Adults (12 years and above)" min="1" required />
+          <input type="number" placeholder="Children (2 - 11 years old)" min="0" />
+          <input type="date" placeholder="Travel date" required />
+        </form>
+      </div>
+
+      <div class="booking-action-row">
+        <div class="booking-total-price" id="total-price">₱0.00</div>
+        <button class="add-to-cart-btn">Add to Cart</button>
+        <button class="book-now-btn">BOOK NOW</button>
+      </div>
+    </section>
+  </main>
+
   <footer>
     <div class="footer-container">
       <div class="footer-logo-col">
@@ -164,16 +138,16 @@
       <div class="footer-center-col">
         <div class="footer-social-label"><strong>Follow us on:</strong></div>
         <div class="footer-social">
-          <a href="#"><img src="instagram.svg" alt="Instagram" class="footer-icon"></a>
-          <a href="#"><img src="facebook.svg" alt="Facebook" class="footer-icon"></a>
+          <a href="#"><img src="instagram.svg" alt="Instagram" class="footer-icon" /></a>
+          <a href="#"><img src="facebook.svg" alt="Facebook" class="footer-icon" /></a>
         </div>
         <div class="footer-copy">ATT Travel and Tours 2025</div>
       </div>
       <div class="footer-col right">
         <div class="footer-contact">
-          <div><img src="mail.png" class="footer-icon"> adventurerstraveltreats@gmail.com</div>
-          <div><img src="phone.svg" class="footer-icon"> +09323102040</div>
-          <div><img src="location.png" class="footer-icon"> 272 Libia Baesa Caloocan City, Metro Manila</div>
+          <div><img src="mail.png" class="footer-icon" /> adventurerstraveltreats@gmail.com</div>
+          <div><img src="phone.svg" class="footer-icon" /> +09323102040</div>
+          <div><img src="location.png" class="footer-icon" /> 272 Libia Baesa Caloocan City, Metro Manila</div>
         </div>
         <div class="footer-links-row">
           <a href="#">Terms and Condition</a>
@@ -182,6 +156,301 @@
       </div>
     </div>
   </footer>
-<script src="script.js"></script>
+
+  <script>
+    
+    const packagesData = {
+      // Domestic
+        ilocos: {
+        title: "Ilocos Tour",
+        price: "₱3,750.00",
+        duration: "3D/2N",
+        location: "Philippines",
+        image: "ilocos.jpg",
+        description: "Explore the heritage sites of Ilocos, including Pagudgud and Vigan.",
+        inclusions: [
+          "Round-trip van transfers",
+          "Transient accommodation in Pagudgud & Vigan",
+          "Daily breakfast",
+          "Parking, gas, and toll fees"
+        ],
+        exclusions: [],
+        itineraryLeft: `Day 1:<br>Arrive in Vigan, check in<br>Walking tour of Calle Crisologo & Bantay Bell Tower`,
+        itineraryRight: `Day 2:<br>Transfer to Pagudgud<br>Visit Saud Beach & Kabigan Falls<br>Return to Manila`
+      },
+      sagada: {
+        title: "Sagada, Mountain Province",
+        price: "₱3,750.00",
+        duration: "3D/2N",
+        location: "Philippines",
+        image: "sagada.jpg",
+        description: "A beautiful mountain town known for caves, hanging coffins, and scenic views.",
+        inclusions: [
+          "Roundtrip Van Transfers",
+          "Transient Accommodation",
+          "2nd day breakfast",
+          "Registration Fees",
+          "Parking, Gas, and Toll Fees"
+        ],
+        exclusions: [
+          "Personal expenses",
+          "Meals not specified"
+        ],
+        itineraryLeft: `
+          Day 1:<br>
+          Arrival and check in<br>
+          Explore caves and hanging coffins
+        `,
+        itineraryRight: `
+          Day 2:<br>
+          Visit Echo Valley and sunrise hike
+        `
+      },
+      baguio: {
+        title: "Baguio City Tour",
+        price: "₱3,750.00",
+        duration: "3D/2N",
+        location: "Philippines",
+        image: "baguio.jpg",
+        description: "Enjoy the cool weather and attractions of the Summer Capital of the Philippines.",
+        inclusions: [
+          "Roundtrip Van Transfers",
+          "Transient Accommodation",
+          "2nd Day Breakfast",
+          "Parking, Gas, and Toll Fees"
+        ],
+        exclusions: [
+          "Personal expenses",
+          "Meals not specified"
+        ],
+        itineraryLeft: `
+          Day 1:<br>
+          Arrival and city tour<br>
+          Visit Burnham Park and night market
+        `,
+        itineraryRight: `
+          Day 2:<br>
+          Visit Mines View Park and Wright Park
+        `
+      },
+      // International
+      southkorea: {
+        title: "South Korea 6D/4N Tour",
+        price: "₱50,000.00",
+        duration: "6D/4N",
+        location: "South Korea",
+        image: "southkorea.jpg",
+        description: "Experience the vibrant culture and sights of South Korea including Seoul, Chuncheon, and ski resorts.",
+        inclusions: [
+          "4 nights’ room accommodation with daily hotel breakfast (twin sharing)",
+          "Sightseeing tours including entrance fees",
+          "Private coach with English speaking guide",
+          "Meals as listed",
+          "Round trip airfare via Cebu Pacific (7kg hand carry only)"
+        ],
+        exclusions: [
+          "Personal expenses (telephone calls, mini bars, etc.)",
+          "Tips for driver and guide (PHP 1200/PAX)",
+          "Philippines travel tax (PHP 1620/PAX)",
+          "Single supplement",
+          "Travel insurance",
+          "Covid related procedures",
+          "Extra baggage allowance",
+          "Korea Visa"
+        ],
+        itineraryLeft: `
+          Day 1:<br>
+          Arrival, transfer to Chuncheon<br>
+          Visit Nami Island, ski resort, and Seoul city tour
+        `,
+        itineraryRight: `
+          Days 2-4:<br>
+          Sightseeing including Blue House, Gyeongbokgung Palace, shopping, and free day<br>
+          Transfer back on Day 6
+        `
+      },
+      hongkongmacau: {
+        title: "Hong Kong, Macau 5D/4N Tour",
+        price: "₱45,000.00",
+        duration: "5D/4N",
+        location: "Hong Kong & Macau",
+        image: "hongkongmacau.jpg",
+        description: "Explore the vibrant cities of Hong Kong and Macau with rich culture, shopping, and entertainment.",
+        inclusions: [
+          "4 nights room accommodation with daily hotel breakfast",
+          "Private coach with English speaking guide",
+          "Sightseeing tours including entrance fees",
+          "Meals as listed",
+          "Round trip airfare via Cebu Pacific (7KG hand carry only)",
+          "144 Group visa"
+        ],
+        exclusions: [
+          "Personal expenses",
+          "Check-in baggage allowance",
+          "PH travel tax",
+          "Optional tours",
+          "Tips for driver and guide",
+          "Single supplement"
+        ],
+        itineraryLeft: `
+          Day 1:<br>
+          Arrival, Hong Kong tour including heritage sites and ferry ride<br>
+          Transfer to Shenzhen and hotel check-in
+        `,
+        itineraryRight: `
+          Days 2-4:<br>
+          Tours of Canton, Zhuhai, Macau and shopping<br>
+          Departure on Day 5
+        `
+      },
+      taiwan: {
+        title: "Taiwan 4D/3N Tour",
+        price: "₱40,000.00",
+        duration: "4D/3N",
+        location: "Taiwan",
+        image: "taiwan.jpg",
+        description: "Discover Taiwan's cultural and natural wonders including Taipei, Taichung, and famous parks.",
+        inclusions: [
+          "3 nights room accommodation with daily hotel breakfast",
+          "Private coach with English speaking guide",
+          "Sightseeing tours including entrance fees",
+          "Meals: 3 lunches including BBQ & Hotpot buffet",
+          "Round trip airfare via EVA Air with 1pc 23kilos checked baggage",
+          "Basic travel insurance"
+        ],
+        exclusions: [
+          "Personal expenses",
+          "Extra baggage allowance",
+          "Philippines travel tax (USD30/PAX)",
+          "Tips for driver and guide (USD20/PAX)",
+          "Single supplement",
+          "Covid-19 test if needed"
+        ],
+        itineraryLeft: `
+          Day 1:<br>
+          Arrival, visit Formosan Aboriginal Culture Village, tea garden, night market
+        `,
+        itineraryRight: `
+          Days 2-4:<br>
+          Taipei sightseeing including temples, waterfalls, lantern festival, museums<br>
+          Departure
+        `
+      },
+      // Staycation
+      azure: {
+        title: "Azure Staycation",
+        price: "₱7,000.00 / night",
+        duration: "Flexible",
+        location: "Philippines",
+        image: "azure.jpg",
+        description: "1-bedroom and 2-bedroom condo units with resort-style amenities.",
+        inclusions: [
+          "Use of wave pool, lagoon pool, and Paris Beach Club facilities",
+          "Complimentary Wi-Fi",
+          "Access to fitness center and spa (depending on unit/host)",
+          "Parking (may have additional fees)"
+        ],
+        exclusions: [
+          "Cleaning",
+          "Food and drinks (unless provided by the unit/host)",
+          "Some amenities may require extra payment",
+          "Taxes and other fees depending on booking platform"
+        ],
+        itineraryLeft: "No fixed itinerary - enjoy resort amenities at your leisure.",
+        itineraryRight: "Relax and unwind at your own pace."
+      },
+      cityofdreams: {
+        title: "City of Dreams Staycation",
+        price: "₱12,000.00 / night",
+        duration: "Flexible",
+        location: "Philippines",
+        image: "cityofdreams.jpg",
+        description: "Hotel rooms at Hyatt Regency, Nobu Hotel, or Nüwa Hotel with various room types.",
+        inclusions: [
+          "Room accommodation",
+          "Complimentary Wi-Fi",
+          "Access to hotel pools and fitness centers",
+          "Some packages include breakfast or dining credits"
+        ],
+        exclusions: [
+          "Casino gaming expenses",
+          "Food and beverage unless specified",
+          "Spa treatments and special activities (extra fees)",
+          "Taxes and service charges"
+        ],
+        itineraryLeft: "Enjoy your stay and the hotel amenities.",
+        itineraryRight: "Try dining options and entertainment nearby."
+      },
+      okada: {
+        title: "Okada Manila Staycation",
+        price: "₱15,000.00 / night",
+        duration: "Flexible",
+        location: "Philippines",
+        image: "okada.jpg",
+        description: "Deluxe rooms and suites with premium amenities in Manila Bay.",
+        inclusions: [
+          "Room accommodation",
+          "Complimentary Wi-Fi",
+          "Valet or self-parking",
+          "Local calls within Metro Manila",
+          "Selected packages include spa treatment or dining credits"
+        ],
+        exclusions: [
+          "Food and drinks",
+          "Taxes and service charges",
+          "Premium facility access fees",
+          "Blackout dates restrictions on promo rates"
+        ],
+        itineraryLeft: "Relax in luxury and enjoy the facilities.",
+        itineraryRight: "Explore Manila Bay and nearby attractions."
+      }
+    };
+
+    function getQueryParam(param) {
+      const urlParams = new URLSearchParams(window.location.search);
+      return urlParams.get(param);
+    }
+
+    function renderPackageDetails(pkgId) {
+      const data = packagesData[pkgId];
+      if (!data) {
+        document.getElementById('package-title').textContent = "Package Not Found";
+        document.getElementById('package-price').textContent = "N/A";
+        document.getElementById('duration').textContent = "-";
+        document.getElementById('location').textContent = "-";
+        document.getElementById('package-description').textContent = "Sorry, the selected package does not exist.";
+        document.getElementById('package-image').src = "";
+        document.getElementById('inclusions-list').innerHTML = "";
+        document.getElementById('exclusions-list').innerHTML = "";
+        document.getElementById('itinerary-content').innerHTML = "";
+        document.getElementById('total-price').textContent = "N/A";
+        return;
+      }
+
+      document.getElementById('package-title').textContent = data.title;
+      document.getElementById('package-price').textContent = data.price;
+      document.getElementById('duration').textContent = data.duration;
+      document.getElementById('location').textContent = data.location;
+      document.getElementById('package-description').textContent = data.description;
+      document.getElementById('package-image').src = data.image;
+      document.getElementById('package-image').alt = data.title;
+
+      document.getElementById('inclusions-list').innerHTML = data.inclusions.map(i => `<li>${i}</li>`).join("");
+      document.getElementById('exclusions-list').innerHTML = data.exclusions.map(i => `<li>${i}</li>`).join("");
+
+      document.getElementById('itinerary-content').innerHTML = `
+        <div>${data.itineraryLeft}</div>
+        <div>${data.itineraryRight}</div>
+      `;
+
+      document.getElementById('total-price').textContent = data.price;
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const pkgId = getQueryParam('package') || 'buscalan';
+      renderPackageDetails(pkgId);
+    });
+  </script>
+
 </body>
 </html>
