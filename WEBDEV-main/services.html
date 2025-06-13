@@ -7,9 +7,10 @@
   <title>ATT Travel and Tours - Packages</title>
   <link rel="stylesheet" href="style.css"/>
 </head>
+
 <body>
-</head>
-<div id="authModal" class="modal">
+
+  <div id="authModal" class="modal">
     <div class="modal-content">
       <span id="closeAuth" class="close">&times;</span>
       <div class="tabs">
@@ -43,6 +44,7 @@
       </div>
     </div>
   </div>
+
   <header>
     <div class="logo">
       <img src="logo.png" alt="Logo"/>
@@ -53,7 +55,7 @@
         <li><a href="aboutus.html">About us</a></li>
         <li><a href="services.html" class="active">Services</a></li>
         <li><a href="MyBooking.html">My Booking</a></li>
-        <li><a href="#" id="authTrigger">Sign in</a></li>
+        <li><a href="#" id="loginBtn">Login/Sign in</a></li>
       </ul>
     </nav>
   </header>
@@ -70,9 +72,8 @@
     <section class="package-section">
       <h2 class="package-title">Domestic Tours</h2>
       <div class="package-cards">
-        <!-- Card 1 -->
         <div class="package-card">
-          <img src="buscalan.jpg" alt="Buscalan">
+          <img src="ilocos.jpg" alt="">
           <div class="package-info">
             <div class="package-meta">
                 <img src="calendar.png" alt="Duration" class="meta-icon">
@@ -80,12 +81,11 @@
                 <img src="location-red.png" alt="Location" class="meta-icon">
                 <span>Philippines</span>
             </div>
-          <div class="package-destination">Buscalan</div>
-          <div class="package-price">₱3,750.00</div>
-          <button class="book-now-small" onclick="window.location.href='booking.html'">BOOK NOW</button>
+            <div class="package-destination">Ilocos</div>
+            <div class="package-price">₱3,750.00</div>
+            <button class="book-now-small" onclick="goToBooking('ilocos')">BOOK NOW</button>
           </div>
         </div>
-        <!-- Card 2 -->
         <div class="package-card">
           <img src="sagada.jpg" alt="Sagada">
           <div class="package-info">
@@ -95,14 +95,13 @@
                 <img src="location-red.png" alt="Location" class="meta-icon">
                 <span>Philippines</span>
             </div>
-          <div class="package-destination">Sagada</div>
-          <div class="package-price">₱3,750.00</div>
-          <button class="book-now-small" onclick="window.location.href='booking.html'">BOOK NOW</button>
+            <div class="package-destination">Sagada</div>
+            <div class="package-price">₱3,750.00</div>
+            <button class="book-now-small" onclick="goToBooking('sagada')">BOOK NOW</button>
           </div>
         </div>
-        <!-- Card 3 -->
         <div class="package-card">
-          <img src="launion.jpg" alt="La Union">
+          <img src="baguio.jpg" alt="Baguio">
           <div class="package-info">
             <div class="package-meta">
                 <img src="calendar.png" alt="Duration" class="meta-icon">
@@ -110,9 +109,9 @@
                 <img src="location-red.png" alt="Location" class="meta-icon">
                 <span>Philippines</span>
             </div>
-            <div class="package-destination">La Union</div>
+            <div class="package-destination">Baguio</div>
             <div class="package-price">₱3,750.00</div>
-            <button class="book-now-small" onclick="window.location.href='booking.html'">BOOK NOW</button>
+            <button class="book-now-small" onclick="goToBooking('baguio')">BOOK NOW</button>
           </div>
         </div>
       </div>
@@ -122,47 +121,46 @@
     <section class="package-section">
       <h2 class="package-title">International Tours</h2>
       <div class="package-cards">
-        <!-- Repeat cards as above, change images and destinations as needed -->
         <div class="package-card">
-          <img src="buscalan.jpg" alt="Buscalan">
+          <img src="southkorea.jpg" alt="South Korea">
           <div class="package-info">
             <div class="package-meta">
                 <img src="calendar.png" alt="Duration" class="meta-icon">
-                <span>3D/2N</span>
+                <span>6D/4N</span>
                 <img src="location-red.png" alt="Location" class="meta-icon">
-                <span>Philippines</span>
+                <span>South Korea</span>
             </div>
-          <div class="package-destination">Buscalan</div>
-          <div class="package-price">₱3,750.00</div>
-          <button class="book-now-small" onclick="window.location.href='booking.html'">BOOK NOW</button>
+            <div class="package-destination">South Korea</div>
+            <div class="package-price">₱50,000.00</div>
+            <button class="book-now-small" onclick="goToBooking('southkorea')">BOOK NOW</button>
           </div>
         </div>
         <div class="package-card">
-          <img src="sagada.jpg" alt="Sagada">
+          <img src="hongkongmacau.jpg" alt="Hong Kong & Macau">
           <div class="package-info">
             <div class="package-meta">
                 <img src="calendar.png" alt="Duration" class="meta-icon">
-                <span>3D/2N</span>
+                <span>5D/4N</span>
                 <img src="location-red.png" alt="Location" class="meta-icon">
-                <span>Philippines</span>
+                <span>Hong Kong & Macau</span>
             </div>
-          <div class="package-destination">Sagada</div>
-          <div class="package-price">₱3,750.00</div>
-          <button class="book-now-small" onclick="window.location.href='booking.html'">BOOK NOW</button>
+            <div class="package-destination">Hong Kong & Macau</div>
+            <div class="package-price">₱45,000.00</div>
+            <button class="book-now-small" onclick="goToBooking('hongkongmacau')">BOOK NOW</button>
           </div>
         </div>
         <div class="package-card">
-          <img src="launion.jpg" alt="La Union">
+          <img src="taiwan.jpg" alt="Taiwan">
           <div class="package-info">
             <div class="package-meta">
                 <img src="calendar.png" alt="Duration" class="meta-icon">
-                <span>3D/2N</span>
+                <span>4D/3N</span>
                 <img src="location-red.png" alt="Location" class="meta-icon">
-                <span>Philippines</span>
+                <span>Taiwan</span>
             </div>
-          <div class="package-destination">La Union</div>
-          <div class="package-price">₱3,750.00</div>
-          <button class="book-now-small" onclick="window.location.href='booking.html'">BOOK NOW</button>
+            <div class="package-destination">Taiwan</div>
+            <div class="package-price">₱40,000.00</div>
+            <button class="book-now-small" onclick="goToBooking('taiwan')">BOOK NOW</button>
           </div>
         </div>
       </div>
@@ -173,45 +171,45 @@
       <h2 class="package-title">Staycations</h2>
       <div class="package-cards">
         <div class="package-card">
-          <img src="buscalan.jpg" alt="Okada">
+          <img src="azure.jpg" alt="Azure">
           <div class="package-info">
             <div class="package-meta">
                 <img src="calendar.png" alt="Duration" class="meta-icon">
-                <span>3D/2N</span>
+                <span>Flexible</span>
                 <img src="location-red.png" alt="Location" class="meta-icon">
                 <span>Philippines</span>
             </div>
-          <div class="package-destination">Okada</div>
-          <div class="package-price">₱3,750.00</div>
-          <button class="book-now-small" onclick="window.location.href='booking.html'">BOOK NOW</button>
+            <div class="package-destination">Azure</div>
+            <div class="package-price">₱7,000.00 / night</div>
+            <button class="book-now-small" onclick="goToBooking('azure')">BOOK NOW</button>
           </div>
         </div>
         <div class="package-card">
-          <img src="sagada.jpg" alt="Solaire">
+          <img src="cityofdreams.jpg" alt="City of Dreams">
           <div class="package-info">
             <div class="package-meta">
                 <img src="calendar.png" alt="Duration" class="meta-icon">
-                <span>3D/2N</span>
+                <span>Flexible</span>
                 <img src="location-red.png" alt="Location" class="meta-icon">
                 <span>Philippines</span>
             </div>
-          <div class="package-destination">Solaire</div>
-          <div class="package-price">₱3,750.00</div>
-          <button class="book-now-small" onclick="window.location.href='booking.html'">BOOK NOW</button>
+            <div class="package-destination">City of Dreams</div>
+            <div class="package-price">₱12,000.00 / night</div>
+            <button class="book-now-small" onclick="goToBooking('cityofdreams')">BOOK NOW</button>
           </div>
         </div>
         <div class="package-card">
-          <img src="launion.jpg" alt="La Union">
+          <img src="okada.jpg" alt="Okada Manila">
           <div class="package-info">
             <div class="package-meta">
                 <img src="calendar.png" alt="Duration" class="meta-icon">
-                <span>3D/2N</span>
+                <span>Flexible</span>
                 <img src="location-red.png" alt="Location" class="meta-icon">
                 <span>Philippines</span>
             </div>
-          <div class="package-destination">La Union</div>
-          <div class="package-price">₱3,750.00</div>
-          <button class="book-now-small" onclick="window.location.href='booking.html'">BOOK NOW</button>
+            <div class="package-destination">Okada Manila</div>
+            <div class="package-price">₱15,000.00 / night</div>
+            <button class="book-now-small" onclick="goToBooking('okada')">BOOK NOW</button>
           </div>
         </div>
       </div>
@@ -245,6 +243,12 @@
       </div>
     </div>
   </footer>
-<script src="script.js"></script>
+
+<script>
+  function goToBooking(packageId) {
+    window.location.href = `booking.html?package=${packageId}`;
+  }
+</script>
+
 </body>
 </html>
