@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AboutUS</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+</head>
+<div id="authModal" class="modal">
+    <div class="modal-content">
+      <span id="closeAuth" class="close">&times;</span>
+      <div class="tabs">
+        <button id="tabSignIn" class="active">Sign In</button>
+        <button id="tabSignUp">Sign Up</button>
+      </div>
+      <div id="formSignIn" class="form-container">
+        <form id="signinForm">
+          <input type="text" placeholder="Username or Email" required>
+          <input type="password" placeholder="Password" required>
+          <button type="submit">Sign In</button>
+        </form>
+      </div>
+      <div id="formSignUp" class="form-container">
+        <form id="signupForm">
+          <h2>Create an Account</h2>
+          <label for="su-name"><b>Full Name</b></label>
+          <input id="su-name" type="text" placeholder="Your Name" required>
+
+          <label for="su-email"><b>Email</b></label>
+          <input id="su-email" type="email" placeholder="Your Email" required>
+
+          <label for="su-password"><b>Password</b></label>
+          <input id="su-password" type="password" placeholder="Password" required>
+
+          <label for="su-password2"><b>Confirm Password</b></label>
+          <input id="su-password2" type="password" placeholder="Repeat Password" required>
+
+          <button type="submit">Sign Up</button>
+        </form>
+      </div>
+    </div>
+  </div>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <img src="logo.png" alt="Logo"/>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="landing.html">Home</a></li>
+        <li><a href="aboutus.html" class="active">About us</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="MyBooking.html">My Booking</a></li>
+        <li><a href="#" id="authTrigger">Sign in</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- About Us Section -->
+  <section class="about-us-section">
+  <div class="about-container">
+    <div class="about-photo">
+      <img src="OurTeam.jpg" alt="Our Travel Team">
+    </div>
+    <div class="about-text">
+      <h2>About Us</h2>
+      <p> Founded in 2017, our home-based travel agency has been crafting seamless, high-quality, and unforgettable trips for countless clients. With nine years of expertise, Fiesta Tours & Travel Corp ensures stress-free travel—letting you enjoy the world with modern conveniences. As a BIR-registered agency, we take pride in offering excellent value, personalized attention, and expert advice. Our mission is clear: to deliver effortless, premium, and truly memorable travel experiences across the globe.</p>
+      <div class="mission-vision">
+        <div class="block mission">
+          <h3>Our Mission</h3>
+          <p>To provide hassle‑free, high‑quality, and memorable travel experiences worldwide.</p>
+        </div>
+        <div class="block vision">
+          <h3>Our Vision</h3>
+          <p>To be the most trusted travel partner, inspiring seamless and enriching journeys.</p>
+        </div>
+      </div>
+      <!-- New Section: Our Team -->
+      <div class="team-section">
+        <h3>Our Team</h3>
+        <div class="team-carousel-container">
+          <div class="team-text">
+            <p>Our dedicated team of travel experts is passionate about crafting personalized travel experiences that exceed expectations. With years of industry experience, we ensure every trip is seamless and unforgettable.</p>
+          </div>
+          <div class="team-carousel">
+            <div class="carousel-slide"><img src="clientgallery1.jpg" alt="Team Member 1"></div>
+            <div class="carousel-slide"><img src="team2.jpg" alt="Team Member 2"></div>
+            <div class="carousel-slide"><img src="team3.jpg" alt="Team Member 3"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- New Section: Client Gallery -->
+      <div class="client-gallery-section">
+        <h3>Client Gallery</h3>
+        <div class="client-gallery">
+          <a href="https://www.facebook.com/client1" target="_blank" rel="noopener noreferrer">
+            <img src="clientgallery1.jpg" alt="Client 1 Photo" />
+          </a>
+          <a href="https://www.facebook.com/photo.php?fbid=663801763167801&set=pb.100086139480760.-2207520000&type=3" target="_blank" rel="noopener noreferrer">
+            <img src="clientgallery2.jpg" alt="Client 2 Photo" />
+          </a>
+          <a href="https://www.facebook.com/photo.php?fbid=663801636501147&set=pb.100086139480760.-2207520000&type=3" target="_blank" rel="noopener noreferrer">
+            <img src="clientgallery3.jpg" alt="Client 3 Photo" />
+          </a>
+          <a href="https://www.facebook.com/client4" target="_blank" rel="noopener noreferrer">
+            <img src="client4.jpg" alt="Client 4 Photo" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <footer>
+    <div class="footer-container">
+      <div class="footer-logo-col">
+        <img src="logo.png" alt="ATT Logo" class="footer-logo" />
+      </div>
+      <div class="footer-center-col">
+        <div class="footer-social-label"><strong>Follow us on:</strong></div>
+        <div class="footer-social">
+          <a href="#"><img src="instagram.svg" alt="Instagram" class="footer-icon"></a>
+          <a href="#"><img src="facebook.svg" alt="Facebook" class="footer-icon"></a>
+        </div>
+        <div class="footer-copy">ATT Travel and Tours 2025</div>
+      </div>
+      <div class="footer-col right">
+        <div class="footer-contact">
+          <div><img src="mail.png" class="footer-icon"> adventurerstraveltreats@gmail.com</div>
+          <div><img src="phone.svg" class="footer-icon"> +09323102040</div>
+          <div><img src="location.png" class="footer-icon"> 272 Libia Baesa Caloocan City, Metro Manila</div>
+        </div>
+        <div class="footer-links-row">
+          <a href="#">Terms and Condition</a>
+          <a href="#">Privacy Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+<script src="script.js"></script>
+</body>
+</html>

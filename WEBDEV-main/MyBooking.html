@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Booking</title>
+  <link rel="stylesheet" href="style.css"/>
+
+</head>
+<div id="authModal" class="modal">
+    <div class="modal-content">
+      <span id="closeAuth" class="close">&times;</span>
+      <div class="tabs">
+        <button id="tabSignIn" class="active">Sign In</button>
+        <button id="tabSignUp">Sign Up</button>
+      </div>
+      <div id="formSignIn" class="form-container">
+        <form id="signinForm">
+          <input type="text" placeholder="Username or Email" required>
+          <input type="password" placeholder="Password" required>
+          <button type="submit">Sign In</button>
+        </form>
+      </div>
+      <div id="formSignUp" class="form-container">
+        <form id="signupForm">
+          <h2>Create an Account</h2>
+          <label for="su-name"><b>Full Name</b></label>
+          <input id="su-name" type="text" placeholder="Your Name" required>
+
+          <label for="su-email"><b>Email</b></label>
+          <input id="su-email" type="email" placeholder="Your Email" required>
+
+          <label for="su-password"><b>Password</b></label>
+          <input id="su-password" type="password" placeholder="Password" required>
+
+          <label for="su-password2"><b>Confirm Password</b></label>
+          <input id="su-password2" type="password" placeholder="Repeat Password" required>
+
+          <button type="submit">Sign Up</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <header>
+    <div class="logo">
+      <img src="logo.png" alt="Logo"/>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="landing.html" >Home</a></li>
+        <li><a href="aboutus.html">About us</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="MyBooking.html"class="active">My Booking</a></li>
+        <li><a href="#" id="authTrigger">Sign in</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>My Bookings</h1>
+    <ul class="bookings-list" aria-live="polite" aria-relevant="additions removals" aria-label="List of your bookings">
+      <!-- Example booking card -->
+      <li class="booking-card" tabindex="0">
+        <div class="booking-header">
+          <div>Booking #12345</div>
+          <div>Status: <strong>Confirmed</strong></div>
+        </div>
+        <div class="booking-details">
+          <div>
+            <div class="detail-label">Destination</div>
+            <div>South Korea</div>
+          </div>
+          <div>
+            <div class="detail-label">Departure Date</div>
+            <div>2025-03-22</div>
+          </div>
+          <div>
+            <div class="detail-label">Return Date</div>
+            <div>2025-04-05</div>
+          </div>
+          <div>
+            <div class="detail-label">Travelers</div>
+            <div>2 Adults</div>
+          </div>
+          <div>
+            <div class="detail-label">Booking Date</div>
+            <div>2024-09-15</div>
+          </div>
+          <div>
+            <div class="detail-label">Total Price</div>
+            <div>$2,450</div>
+          </div>
+        </div>
+        <div class="booking-actions">
+          <button class="action-btn" type="button" aria-label="View details for booking 12345">View Details</button>
+          <button class="action-btn" type="button" aria-label="Cancel booking 12345">Cancel Booking</button>
+        </div>
+      </li>
+
+    </ul>
+  </main>
+
+  <!-- Minimal footer -->
+  <footer>
+      <div class="footer-container">
+        <div class="footer-logo-col">
+          <img src="logo.png" alt="ATT Logo" class="footer-logo" />
+        </div>
+        <div class="footer-center-col">
+          <div class="footer-social-label"><strong>Follow us on:</strong></div>
+          <div class="footer-social">
+            <a href="#"><img src="instagram.svg" alt="Instagram" class="footer-icon"></a>
+            <a href="#"><img src="facebook.svg" alt="Facebook" class="footer-icon"></a>
+          </div>
+          <div class="footer-copy">ATT Travel and Tours 2025</div>
+        </div>
+        <div class="footer-col right">
+          <div class="footer-contact">
+            <div><img src="mail.png" class="footer-icon"> adventurerstraveltreats@gmail.com</div>
+            <div><img src="phone.svg" class="footer-icon"> +09323102040</div>
+            <div><img src="location.png" class="footer-icon"> 272 Libia Baesa Caloocan City, Metro Manila</div>
+          </div>
+          <div class="footer-links-row">
+            <a href="#">Terms and Condition</a>
+            <a href="#">Privacy Policy</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ATT Travel and Tours</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+
+<body>
+
+  <div id="authModal" class="modal">
+    <div class="modal-content">
+      <span id="closeAuth" class="close">&times;</span>
+      <div class="tabs">
+        <button id="tabSignIn" class="active">Sign In</button>
+        <button id="tabSignUp">Sign Up</button>
+      </div>
+      <div id="formSignIn" class="form-container">
+        <form id="signinForm">
+          <input type="text" placeholder="Username or Email" required>
+          <input type="password" placeholder="Password" required>
+          <button type="submit">Sign In</button>
+        </form>
+      </div>
+      <div id="formSignUp" class="form-container">
+        <form id="signupForm">
+          <h2>Create an Account</h2>
+          <label for="su-name"><b>Full Name</b></label>
+          <input id="su-name" type="text" placeholder="Your Name" required>
+
+          <label for="su-email"><b>Email</b></label>
+          <input id="su-email" type="email" placeholder="Your Email" required>
+
+          <label for="su-password"><b>Password</b></label>
+          <input id="su-password" type="password" placeholder="Password" required>
+
+          <label for="su-password2"><b>Confirm Password</b></label>
+          <input id="su-password2" type="password" placeholder="Repeat Password" required>
+
+          <button type="submit">Sign Up</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <header>
+    <div class="logo">
+      <img src="logo.png" alt="Logo"/>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#" class="active">Home</a></li>
+        <li><a href="aboutus.html">About us</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="MyBooking.html">My Booking</a></li>
+        <li><a href="#" id="authTrigger">Sign in</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="carousel">
+      <button class="carousel-button left">&#10094;</button>
+    
+      <div class="carousel-track-container">
+        <ul class="carousel-track">
+          <li class="carousel-slide current-slide">
+            <img src="SKR.jpg" alt="Slide 1">
+          </li>
+          <li class="carousel-slide">
+            <img src="boracay.jpg" alt="Slide 2">
+          </li>
+          <li class="carousel-slide">
+            <img src="Sagada.jpg" alt="Slide 3">
+          </li>
+        </ul>
+      </div>
+    
+      <button class="carousel-button right">&#10095;</button>
+    </div>
+  </section>
+
+  <section class="booking-section">
+    <button class="book-now" id="bookNowBtn">Book Now</button>
+    <h2>Discover the World’s Hidden Wonders</h2>
+    <p>Explore breathtaking destinations, unforgettable adventures, and personalized tours — all in one place.</p>
+    <div class="cards">
+
+      <div class="card" onclick="window.location.href='services.html'">
+        <div class="card-img-wrapper">
+          <img src="flight.webp" alt="Flight"/>
+        </div>
+        <div class="card-content">
+          <h3>International Tours</h3>
+          <p>Embark on global adventures with ease and excitement.</p>
+        </div>
+      </div>
+
+      <div class="card" onclick="window.location.href='services.html'">
+        <div class="card-img-wrapper">
+          <img src="Domestic.png" alt="Hotel"/>
+        </div>
+        <div class="card-content">
+          <h3>Domestic Tour</h3>
+          <p>Discover the beauty of local destinations with comfort.</p>
+        </div>
+      </div>
+
+      <div class="card" onclick="window.location.href='services.html'">
+        <div class="card-img-wrapper">
+          <img src="okada.jpg" alt="Tour"/>
+        </div>
+        <div class="card-content">
+          <h3>Staycation</h3>
+          <p>Relax and recharge with luxurious nearby getaways.</p>
+        </div>
+      </div>
+    </div>
+
+    <section class="inquiries">
+      <form class="inquiry-form">
+        <div class="input-grid">
+          <input type="text" name="destinations" placeholder="Destination" required>
+          <input type="date" name="date" placeholder="Target Date" required>
+          <input type="text" name="email" placeholder="Your Email" required>
+          <input type="text" name="phone" placeholder="Phone Number">
+        </div>
+        <button type="submit">Send Inquiry</button>
+      </form>
+    </section>
+
+    <section class="recommended">
+      <h2>Recommended For You</h2>
+      <div class="cards">
+
+        <!-- Card 1 -->
+        <div class="card" onclick="window.location.href='booking.html'">
+          <div class="card-img-wrapper">
+            <img src="SKR.jpg" alt="South Korea">
+          </div>
+          <div class="card-content">
+            <h3>South Korea</h3>
+            <p>Explore the wonders of Korea</p>
+            <div class="card-actions">
+              <button class="btn-book" id="bookNowBtn">Book Now</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="card" onclick="window.location.href='booking.html'">
+          <div class="card-img-wrapper">
+            <img src="tomi.jpg" alt="Tomi">
+          </div>
+          <div class="card-content">
+            <h3>Tomi</h3>
+            <p>178 kcal snack</p>
+            <div class="card-actions">
+              <button class="btn-book" id="bookNowBtn">Book Now</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="card" onclick="window.location.href='booking.html'">
+          <div class="card-img-wrapper">
+            <img src="chicken curry.jpg" alt="Chicken Curry">
+          </div>
+          <div class="card-content">
+            <h3>Chicken Curry</h3>
+            <p>256 kcal meal</p>
+            <div class="card-actions">
+              <button class="btn-book" id="bookNowBtn">Book Now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="reviews-section">
+      <h2>What Our Travelers Say</h2>
+      <div class="reviews-container">
+        <div class="review">
+          <img src="avatar1.jpg" alt="Avatar of Maria Santos">
+          <p class="review-text">“An unforgettable Calaguas trip! Meticulous planning, top‑notch guides, and breathtaking views.”</p>
+          <p class="review-author">— Maria Santos</p>
+        </div>
+        <div class="review">
+          <img src="avatar2.jpg" alt="Avatar of Juan Cruz">
+          <p class="review-text">“Seamless booking and amazing staycation experience. Highly recommended!”</p>
+          <p class="review-author">— Juan Cruz</p>
+        </div>
+        <div class="review">
+          <img src="avatar3.jpg" alt="Avatar of Camille Villar">
+          <p class="review-text">“Excellent service and attention to detail from start to finish!”</p>
+          <p class="review-author">— Camille Villar</p>
+        </div>
+      </div>
+      <form class="feedback-form">
+        <h3>Leave your feedback</h3>
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" placeholder="Your Feedback" rows="4" required></textarea>
+        <button type="submit">Submit Feedback</button>
+      </form>
+    </section>
+
+    <footer>
+      <div class="footer-container">
+        <div class="footer-logo-col">
+          <img src="logo.png" alt="ATT Logo" class="footer-logo" />
+        </div>
+        <div class="footer-center-col">
+          <div class="footer-social-label"><strong>Follow us on:</strong></div>
+          <div class="footer-social">
+            <a href="#"><img src="instagram.svg" alt="Instagram" class="footer-icon"></a>
+            <a href="#"><img src="facebook.svg" alt="Facebook" class="footer-icon"></a>
+          </div>
+          <div class="footer-copy">ATT Travel and Tours 2025</div>
+        </div>
+        <div class="footer-col right">
+          <div class="footer-contact">
+            <div><img src="mail.png" class="footer-icon"> adventurerstraveltreats@gmail.com</div>
+            <div><img src="phone.svg" class="footer-icon"> +09323102040</div>
+            <div><img src="location.png" class="footer-icon"> 272 Libia Baesa Caloocan City, Metro Manila</div>
+          </div>
+          <div class="footer-links-row">
+            <a href="aboutus.html">Terms and Condition</a>
+            <a href="aboutus.html">Privacy Policy</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </section>
+  <script src="script.js"></script>
+</body>
+</html>

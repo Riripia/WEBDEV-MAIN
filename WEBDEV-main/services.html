@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ATT Travel and Tours - Packages</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+</head>
+<div id="authModal" class="modal">
+    <div class="modal-content">
+      <span id="closeAuth" class="close">&times;</span>
+      <div class="tabs">
+        <button id="tabSignIn" class="active">Sign In</button>
+        <button id="tabSignUp">Sign Up</button>
+      </div>
+      <div id="formSignIn" class="form-container">
+        <form id="signinForm">
+          <input type="text" placeholder="Username or Email" required>
+          <input type="password" placeholder="Password" required>
+          <button type="submit">Sign In</button>
+        </form>
+      </div>
+      <div id="formSignUp" class="form-container">
+        <form id="signupForm">
+          <h2>Create an Account</h2>
+          <label for="su-name"><b>Full Name</b></label>
+          <input id="su-name" type="text" placeholder="Your Name" required>
+
+          <label for="su-email"><b>Email</b></label>
+          <input id="su-email" type="email" placeholder="Your Email" required>
+
+          <label for="su-password"><b>Password</b></label>
+          <input id="su-password" type="password" placeholder="Password" required>
+
+          <label for="su-password2"><b>Confirm Password</b></label>
+          <input id="su-password2" type="password" placeholder="Repeat Password" required>
+
+          <button type="submit">Sign Up</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <header>
+    <div class="logo">
+      <img src="logo.png" alt="Logo"/>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="landing.html">Home</a></li>
+        <li><a href="aboutus.html">About us</a></li>
+        <li><a href="services.html" class="active">Services</a></li>
+        <li><a href="MyBooking.html">My Booking</a></li>
+        <li><a href="#" id="authTrigger">Sign in</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Search Bar -->
+    <div class="package-search-bar">
+      <input type="text" placeholder="Destination" />
+      <button class="search-btn"><img src="search-icon.svg" alt="Search"></button>
+    </div>
+
+    <!-- Domestic Tours -->
+    <section class="package-section">
+      <h2 class="package-title">Domestic Tours</h2>
+      <div class="package-cards">
+        <!-- Card 1 -->
+        <div class="package-card">
+          <img src="buscalan.jpg" alt="Buscalan">
+          <div class="package-info">
+            <div class="package-meta">
+                <img src="calendar.png" alt="Duration" class="meta-icon">
+                <span>3D/2N</span>
+                <img src="location-red.png" alt="Location" class="meta-icon">
+                <span>Philippines</span>
+            </div>
+          <div class="package-destination">Buscalan</div>
+          <div class="package-price">₱3,750.00</div>
+          <button class="book-now-small" onclick="window.location.href='booking.html'">BOOK NOW</button>
+          </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="package-card">
+          <img src="sagada.jpg" alt="Sagada">
+          <div class="package-info">
+            <div class="package-meta">
+                <img src="calendar.png" alt="Duration" class="meta-icon">
+                <span>3D/2N</span>
+                <img src="location-red.png" alt="Location" class="meta-icon">
+                <span>Philippines</span>
+            </div>
+          <div class="package-destination">Sagada</div>
+          <div class="package-price">₱3,750.00</div>
+          <button class="book-now-small" onclick="window.location.href='booking.html'">BOOK NOW</button>
+          </div>
+        </div>
+        <!-- Card 3 -->
+        <div class="package-card">
+          <img src="launion.jpg" alt="La Union">
+          <div class="package-info">
+            <div class="package-meta">
+                <img src="calendar.png" alt="Duration" class="meta-icon">
+                <span>3D/2N</span>
+                <img src="location-red.png" alt="Location" class="meta-icon">
+                <span>Philippines</span>
+            </div>
+            <div class="package-destination">La Union</div>
+            <div class="package-price">₱3,750.00</div>
+            <button class="book-now-small" onclick="window.location.href='booking.html'">BOOK NOW</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- International Tours -->
+    <section class="package-section">
+      <h2 class="package-title">International Tours</h2>
+      <div class="package-cards">
+        <!-- Repeat cards as above, change images and destinations as needed -->
+        <div class="package-card">
+          <img src="buscalan.jpg" alt="Buscalan">
+          <div class="package-info">
+            <div class="package-meta">
+                <img src="calendar.png" alt="Duration" class="meta-icon">
+                <span>3D/2N</span>
+                <img src="location-red.png" alt="Location" class="meta-icon">
+                <span>Philippines</span>
+            </div>
+          <div class="package-destination">Buscalan</div>
+          <div class="package-price">₱3,750.00</div>
+          <button class="book-now-small" onclick="window.location.href='booking.html'">BOOK NOW</button>
+          </div>
+        </div>
+        <div class="package-card">
+          <img src="sagada.jpg" alt="Sagada">
+          <div class="package-info">
+            <div class="package-meta">
+                <img src="calendar.png" alt="Duration" class="meta-icon">
+                <span>3D/2N</span>
+                <img src="location-red.png" alt="Location" class="meta-icon">
+                <span>Philippines</span>
+            </div>
+          <div class="package-destination">Sagada</div>
+          <div class="package-price">₱3,750.00</div>
+          <button class="book-now-small" onclick="window.location.href='booking.html'">BOOK NOW</button>
+          </div>
+        </div>
+        <div class="package-card">
+          <img src="launion.jpg" alt="La Union">
+          <div class="package-info">
+            <div class="package-meta">
+                <img src="calendar.png" alt="Duration" class="meta-icon">
+                <span>3D/2N</span>
+                <img src="location-red.png" alt="Location" class="meta-icon">
+                <span>Philippines</span>
+            </div>
+          <div class="package-destination">La Union</div>
+          <div class="package-price">₱3,750.00</div>
+          <button class="book-now-small" onclick="window.location.href='booking.html'">BOOK NOW</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Staycations -->
+    <section class="package-section">
+      <h2 class="package-title">Staycations</h2>
+      <div class="package-cards">
+        <div class="package-card">
+          <img src="buscalan.jpg" alt="Okada">
+          <div class="package-info">
+            <div class="package-meta">
+                <img src="calendar.png" alt="Duration" class="meta-icon">
+                <span>3D/2N</span>
+                <img src="location-red.png" alt="Location" class="meta-icon">
+                <span>Philippines</span>
+            </div>
+          <div class="package-destination">Okada</div>
+          <div class="package-price">₱3,750.00</div>
+          <button class="book-now-small" onclick="window.location.href='booking.html'">BOOK NOW</button>
+          </div>
+        </div>
+        <div class="package-card">
+          <img src="sagada.jpg" alt="Solaire">
+          <div class="package-info">
+            <div class="package-meta">
+                <img src="calendar.png" alt="Duration" class="meta-icon">
+                <span>3D/2N</span>
+                <img src="location-red.png" alt="Location" class="meta-icon">
+                <span>Philippines</span>
+            </div>
+          <div class="package-destination">Solaire</div>
+          <div class="package-price">₱3,750.00</div>
+          <button class="book-now-small" onclick="window.location.href='booking.html'">BOOK NOW</button>
+          </div>
+        </div>
+        <div class="package-card">
+          <img src="launion.jpg" alt="La Union">
+          <div class="package-info">
+            <div class="package-meta">
+                <img src="calendar.png" alt="Duration" class="meta-icon">
+                <span>3D/2N</span>
+                <img src="location-red.png" alt="Location" class="meta-icon">
+                <span>Philippines</span>
+            </div>
+          <div class="package-destination">La Union</div>
+          <div class="package-price">₱3,750.00</div>
+          <button class="book-now-small" onclick="window.location.href='booking.html'">BOOK NOW</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-logo-col">
+        <img src="logo.png" alt="ATT Logo" class="footer-logo" />
+      </div>
+      <div class="footer-center-col">
+        <div class="footer-social-label"><strong>Follow us on:</strong></div>
+        <div class="footer-social">
+          <a href="#"><img src="instagram.svg" alt="Instagram" class="footer-icon"></a>
+          <a href="#"><img src="facebook.svg" alt="Facebook" class="footer-icon"></a>
+        </div>
+        <div class="footer-copy">ATT Travel and Tours 2025</div>
+      </div>
+      <div class="footer-col right">
+        <div class="footer-contact">
+          <div><img src="mail.png" class="footer-icon"> adventurerstraveltreats@gmail.com</div>
+          <div><img src="phone.svg" class="footer-icon"> +09323102040</div>
+          <div><img src="location.png" class="footer-icon"> 272 Libia Baesa Caloocan City, Metro Manila</div>
+        </div>
+        <div class="footer-links-row">
+          <a href="#">Terms and Condition</a>
+          <a href="#">Privacy Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+<script src="script.js"></script>
+</body>
+</html>
