@@ -9,14 +9,15 @@
 </head>
 <body>
 </head>
-<div id="authModal" class="modal">
+  <!-- Popup Modal -->
+  <div id="authModal" class="modal">
     <div class="modal-content">
       <span id="closeAuth" class="close">&times;</span>
       <div class="tabs">
         <button id="tabSignIn" class="active">Sign In</button>
         <button id="tabSignUp">Sign Up</button>
       </div>
-      <div id="formSignIn" class="form-container">
+      <div id="formSignIn" class="form-container active">
         <form id="signinForm">
           <input type="text" placeholder="Username or Email" required>
           <input type="password" placeholder="Password" required>
@@ -26,18 +27,14 @@
       <div id="formSignUp" class="form-container">
         <form id="signupForm">
           <h2>Create an Account</h2>
-          <label for="su-name"><b>Full Name</b></label>
+          <label for="su-name">Full Name</label>
           <input id="su-name" type="text" placeholder="Your Name" required>
-
-          <label for="su-email"><b>Email</b></label>
+          <label for="su-email">Email</label>
           <input id="su-email" type="email" placeholder="Your Email" required>
-
-          <label for="su-password"><b>Password</b></label>
+          <label for="su-password">Password</label>
           <input id="su-password" type="password" placeholder="Password" required>
-
-          <label for="su-password2"><b>Confirm Password</b></label>
+          <label for="su-password2">Confirm Password</label>
           <input id="su-password2" type="password" placeholder="Repeat Password" required>
-
           <button type="submit">Sign Up</button>
         </form>
       </div>
