@@ -3,10 +3,10 @@
 
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>ATT Travel and Tours - Booking</title>
-  <link rel="stylesheet" href="style.css" />
-  <style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ATT Travel and Tours - Packages</title>
+  <link rel="stylesheet" href="style.css"/>
+    <style>
     /* Basic styling for layout */
     .booking-details-row {
       display: flex;
@@ -55,12 +55,46 @@
     }
   </style>
 </head>
-
+  
 <body>
 
+<div id="authModal" class="modal">
+    <div class="modal-content">
+      <span id="closeAuth" class="close">&times;</span>
+      <div class="tabs">
+        <button id="tabSignIn" class="active">Sign In</button>
+        <button id="tabSignUp">Sign Up</button>
+      </div>
+      <div id="formSignIn" class="form-container">
+        <form id="signinForm">
+          <input type="text" placeholder="Username or Email" required>
+          <input type="password" placeholder="Password" required>
+          <button type="submit">Sign In</button>
+        </form>
+      </div>
+      <div id="formSignUp" class="form-container">
+        <form id="signupForm">
+          <h2>Create an Account</h2>
+          <label for="su-name"><b>Full Name</b></label>
+          <input id="su-name" type="text" placeholder="Your Name" required>
+
+          <label for="su-email"><b>Email</b></label>
+          <input id="su-email" type="email" placeholder="Your Email" required>
+
+          <label for="su-password"><b>Password</b></label>
+          <input id="su-password" type="password" placeholder="Password" required>
+
+          <label for="su-password2"><b>Confirm Password</b></label>
+          <input id="su-password2" type="password" placeholder="Repeat Password" required>
+
+          <button type="submit">Sign Up</button>
+        </form>
+      </div>
+    </div>
+  </div>
   <header>
     <div class="logo">
-      <img src="logo.png" alt="Logo" />
+      <img src="logo.png" alt="Logo"/>
     </div>
     <nav>
       <ul>
@@ -68,25 +102,26 @@
         <li><a href="aboutus.html">About us</a></li>
         <li><a href="services.html" class="active">Services</a></li>
         <li><a href="MyBooking.html">My Booking</a></li>
-        <li><a href="#" id="loginBtn">Login/Sign in</a></li>
+        <li><a href="#" id="authTrigger">Sign in</a></li>
       </ul>
     </nav>
   </header>
 
-  <main>
-    <section class="booking-details-section">
-      <div class="booking-details-row">
-        <!-- LEFT COLUMN -->
-        <div class="booking-details-left">
-          <div class="booking-details-header">
-            <div class="booking-details-meta">
-              <span><img src="calendar.png" class="meta-icon" alt="Duration" /> <span id="duration">3D/2N</span></span>
-              <span><img src="location-red.png" class="meta-icon" alt="Location" /> <span id="location">Philippines</span></span>
-            </div>
-            <h1 class="booking-title" id="package-title">Package Title</h1>
-            <div class="booking-price" id="package-price">₱0.00</div>
-          </div>
-          <div class="booking-details-info">
+<main>
+  <a href="services.html" class="back-btn" id="backBtn" role="button" aria-label="Go back">← Back</a>
+  <section class="booking-details-section">
+  <div class="booking-details-row">
+    <!-- LEFT COLUMN -->
+    <div class="booking-details-left">
+      <div class="booking-details-header">
+        <div class="booking-details-meta">
+          <span><img src="calendar.png" class="meta-icon" alt="Duration"/> <span id="duration"></span></span></span>
+          <span><img src="location-red.png" class="meta-icon" alt="Location"/> <span id="location"></span></span>
+        </div>
+         <h1 class="booking-title" id="package-title">Package Title</h1>
+         <div class="booking-price" id="package-price">₱0.00</div>
+      </div>
+      <div class="booking-details-info">
             <p id="package-description">Package description goes here.</p>
             <div class="booking-inclusions-exclusions">
               <div>
@@ -100,36 +135,35 @@
             </div>
           </div>
         </div>
-        <!-- RIGHT COLUMN -->
+    <!-- RIGHT COLUMN -->
         <div class="booking-details-image">
           <img id="package-image" src="" alt="Package Image" />
         </div>
       </div>
 
-      <div class="booking-itinerary">
+<div class="booking-itinerary">
         <div class="itinerary-title"><strong>ITINERARY</strong></div>
-        <div class="itinerary-content" id="itinerary-content">
+        <div class="itinerary-content" id="itinerary-content">''
           <!-- Itinerary Left & Right Columns inserted here -->
         </div>
-      </div>
+</div>
 
-      <div class="booking-guests-section">
-        <div class="guests-title"><strong>GUESTS</strong></div>
-        <form class="guests-form">
-          <input type="number" placeholder="Adults (12 years and above)" min="1" required />
-          <input type="number" placeholder="Children (2 - 11 years old)" min="0" />
-          <input type="date" placeholder="Travel date" required />
-        </form>
-      </div>
+  <div class="booking-guests-section">
+    <div class="guests-title">GUESTS</div>
+    <form class="guests-form">
+      <input type="number" placeholder="Adults (12 years and above)" min="1" required>
+      <input type="number" placeholder="Children (2 - 11 years old)" min="0">
+      <input type="date" placeholder="Travel date" required>
+    </form>
+  </div>
+  <div class="booking-action-row">
+    <div class="booking-total-price" id="total-price">₱0.00</div>
+    <button class="book-now-btn">BOOK NOW</button>
+  </div>
+</section>
+</main>
 
-      <div class="booking-action-row">
-        <div class="booking-total-price" id="total-price">₱0.00</div>
-        <button class="add-to-cart-btn">Add to Cart</button>
-        <button class="book-now-btn">BOOK NOW</button>
-      </div>
-    </section>
-  </main>
-
+  <!-- Footer -->
   <footer>
     <div class="footer-container">
       <div class="footer-logo-col">
@@ -138,16 +172,16 @@
       <div class="footer-center-col">
         <div class="footer-social-label"><strong>Follow us on:</strong></div>
         <div class="footer-social">
-          <a href="#"><img src="instagram.svg" alt="Instagram" class="footer-icon" /></a>
-          <a href="#"><img src="facebook.svg" alt="Facebook" class="footer-icon" /></a>
+          <a href="#"><img src="instagram.svg" alt="Instagram" class="footer-icon"></a>
+          <a href="#"><img src="facebook.svg" alt="Facebook" class="footer-icon"></a>
         </div>
         <div class="footer-copy">ATT Travel and Tours 2025</div>
       </div>
       <div class="footer-col right">
         <div class="footer-contact">
-          <div><img src="mail.png" class="footer-icon" /> adventurerstraveltreats@gmail.com</div>
-          <div><img src="phone.svg" class="footer-icon" /> +09323102040</div>
-          <div><img src="location.png" class="footer-icon" /> 272 Libia Baesa Caloocan City, Metro Manila</div>
+          <div><img src="mail.png" class="footer-icon"> adventurerstraveltreats@gmail.com</div>
+          <div><img src="phone.svg" class="footer-icon"> +09323102040</div>
+          <div><img src="location.png" class="footer-icon"> 272 Libia Baesa Caloocan City, Metro Manila</div>
         </div>
         <div class="footer-links-row">
           <a href="#">Terms and Condition</a>
@@ -156,17 +190,15 @@
       </div>
     </div>
   </footer>
-
-  <script>
-    
-    const packagesData = {
+<script>
+   const packagesData = {
       // Domestic
         ilocos: {
         title: "Ilocos Tour",
         price: "₱3,750.00",
         duration: "3D/2N",
         location: "Philippines",
-        image: "ilocos.jpg",
+        image: "ilocos2.png",
         description: "Explore the heritage sites of Ilocos, including Pagudgud and Vigan.",
         inclusions: [
           "Round-trip van transfers",
@@ -183,7 +215,7 @@
         price: "₱3,750.00",
         duration: "3D/2N",
         location: "Philippines",
-        image: "sagada.jpg",
+        image: "sagada2.png",
         description: "A beautiful mountain town known for caves, hanging coffins, and scenic views.",
         inclusions: [
           "Roundtrip Van Transfers",
@@ -211,7 +243,7 @@
         price: "₱3,750.00",
         duration: "3D/2N",
         location: "Philippines",
-        image: "baguio.jpg",
+        image: "baguio.png",
         description: "Enjoy the cool weather and attractions of the Summer Capital of the Philippines.",
         inclusions: [
           "Roundtrip Van Transfers",
@@ -414,43 +446,61 @@
     function renderPackageDetails(pkgId) {
       const data = packagesData[pkgId];
       if (!data) {
-        document.getElementById('package-title').textContent = "Package Not Found";
-        document.getElementById('package-price').textContent = "N/A";
-        document.getElementById('duration').textContent = "-";
-        document.getElementById('location').textContent = "-";
-        document.getElementById('package-description').textContent = "Sorry, the selected package does not exist.";
-        document.getElementById('package-image').src = "";
-        document.getElementById('inclusions-list').innerHTML = "";
-        document.getElementById('exclusions-list').innerHTML = "";
-        document.getElementById('itinerary-content').innerHTML = "";
-        document.getElementById('total-price').textContent = "N/A";
+        const titleEl = document.getElementById('package-title');
+        if (titleEl) titleEl.textContent = "Package Not Found";
+        const priceEl = document.getElementById('package-price');
+        if (priceEl) priceEl.textContent = "N/A";
+        const durationEl = document.getElementById('duration');
+        if (durationEl) durationEl.textContent = "-";
+        const locationEl = document.getElementById('location');
+        if (locationEl) locationEl.textContent = "-";
+        const descEl = document.getElementById('package-description');
+        if (descEl) descEl.textContent = "Sorry, the selected package does not exist.";
+        const imageEl = document.getElementById('package-image');
+        if (imageEl) imageEl.src = "";
+        const inclusionsEl = document.getElementById('inclusions-list');
+        if (inclusionsEl) inclusionsEl.innerHTML = "";
+        const exclusionsEl = document.getElementById('exclusions-list');
+        if (exclusionsEl) exclusionsEl.innerHTML = "";
+        const itineraryEl = document.getElementById('itinerary-content');
+        if (itineraryEl) itineraryEl.innerHTML = "";
+        const totalPriceEl = document.getElementById('total-price');
+        if (totalPriceEl) totalPriceEl.textContent = "N/A";
         return;
       }
 
-      document.getElementById('package-title').textContent = data.title;
-      document.getElementById('package-price').textContent = data.price;
-      document.getElementById('duration').textContent = data.duration;
-      document.getElementById('location').textContent = data.location;
-      document.getElementById('package-description').textContent = data.description;
-      document.getElementById('package-image').src = data.image;
-      document.getElementById('package-image').alt = data.title;
-
-      document.getElementById('inclusions-list').innerHTML = data.inclusions.map(i => `<li>${i}</li>`).join("");
-      document.getElementById('exclusions-list').innerHTML = data.exclusions.map(i => `<li>${i}</li>`).join("");
-
-      document.getElementById('itinerary-content').innerHTML = `
+      const titleEl = document.getElementById('package-title');
+      if (titleEl) titleEl.textContent = data.title;
+      const priceEl = document.getElementById('package-price');
+      if (priceEl) priceEl.textContent = data.price;
+      const durationEl = document.getElementById('duration');
+      if (durationEl) durationEl.textContent = data.duration;
+      const locationEl = document.getElementById('location');
+      if (locationEl) locationEl.textContent = data.location;
+      const descEl = document.getElementById('package-description');
+      if (descEl) descEl.textContent = data.description;
+      const imageEl = document.getElementById('package-image');
+      if (imageEl) {
+        imageEl.src = data.image;
+        imageEl.alt = data.title;
+      }
+      const inclusionsEl = document.getElementById('inclusions-list');
+      if (inclusionsEl) inclusionsEl.innerHTML = data.inclusions.map(i => `<li>${i}</li>`).join("");
+      const exclusionsEl = document.getElementById('exclusions-list');
+      if (exclusionsEl) exclusionsEl.innerHTML = data.exclusions.map(i => `<li>${i}</li>`).join("");
+      const itineraryEl = document.getElementById('itinerary-content');
+      if (itineraryEl) itineraryEl.innerHTML = `
         <div>${data.itineraryLeft}</div>
         <div>${data.itineraryRight}</div>
       `;
-
-      document.getElementById('total-price').textContent = data.price;
+      const totalPriceEl = document.getElementById('total-price');
+      if (totalPriceEl) totalPriceEl.textContent = data.price;
     }
 
     document.addEventListener('DOMContentLoaded', () => {
-      const pkgId = getQueryParam('package') || 'buscalan';
+      const pkgId = getQueryParam('package') || 'ilocos';
       renderPackageDetails(pkgId);
     });
-  </script>
-
+</script>
 </body>
 </html>
