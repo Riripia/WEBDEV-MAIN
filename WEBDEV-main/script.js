@@ -8,12 +8,12 @@ document.addEventListener('DOMContentLoaded', () => {
   const formSU    = document.getElementById('formSignUp');
 
   function openModal(isSignUp = false) {
-    modal.style.display = 'flex';
+    modal.classList.add('show');
     document.body.style.overflow = 'hidden';
     isSignUp ? switchToSignUp() : switchToSignIn();
   }
   function closeModal() {
-    modal.style.display = 'none';
+    modal.classList.remove('show');
     document.body.style.overflow = '';
   }
   function switchToSignIn() {
@@ -30,20 +30,20 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   trigger.addEventListener('click', e => {
-    e.preventDefault(); // avoid page jump
+    e.preventDefault();
     openModal(false);
   });
-
   tabSignIn.addEventListener('click', switchToSignIn);
   tabSignUp.addEventListener('click', switchToSignUp);
   closeBtn.addEventListener('click', closeModal);
-
   modal.addEventListener('click', e => {
-    if (e.target === modal) closeModal(); // click outside
+    if (e.target === modal) closeModal();
   });
   document.addEventListener('keydown', e => {
     if (e.key === 'Escape') closeModal();
   });
+});
+
 
   // Add back button event listener
   const backBtn = document.getElementById('backBtn');
@@ -56,8 +56,8 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
-});
 
+// Carousel functionality
 const track = document.querySelector('.carousel-track');
 if (track) {
   let slides = Array.from(track.children);
